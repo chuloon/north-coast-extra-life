@@ -1,0 +1,13 @@
+body {
+    margin: 0px;
+}
+
+// Font Mixins
+@font-face {
+    font-family: 'headline';
+    src: local('O'),
+        url('assets/fonts/BebasNeue-Regular.ttf') format('truetype'),
+        url('assets/fonts/BebasNeue-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
