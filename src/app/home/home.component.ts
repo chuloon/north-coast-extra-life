@@ -15,4 +15,7 @@ export class HomeComponent implements OnInit {
     }, 10);
   }
 
+  registerClick = () => {
+    window.open("https://www.extra-life.org/index.cfm?fuseaction=register.start&eventID=539&teamID=39974");
+  }
 }
