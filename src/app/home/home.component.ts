@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { PerfectScrollbarComponent } from 'angular2-perfect-scrollbar';
+import { Component, OnInit, ViewChild, Renderer2 } from '@angular/core';
+import { InViewportMetadata } from 'ng-in-viewport';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild(PerfectScrollbarComponent) ps: PerfectScrollbarComponent;
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
     setTimeout(() => {
@@ -17,5 +20,12 @@ export class HomeComponent implements OnInit {
 
   registerClick = () => {
     window.open("https://www.extra-life.org/index.cfm?fuseaction=register.start&eventID=539&teamID=39974");
+  }
+
+  missionIntoView = (event) => {
+    const { [InViewportMetadata]: { entry }, target, value } = event;
+
+    if(value) this.renderer.addClass(target, 'show')
+    else this.renderer.removeClass(target, 'show');
   }
 }
