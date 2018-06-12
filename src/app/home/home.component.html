@@ -13,7 +13,70 @@
   </div>
 </div>
 
-<div id="mission-statement" inViewport (inViewportAction)="missionIntoView($event)">
-    <div class="label">OUR MISSION IS SIMPLE...</div>
-    <div class="title"><div>DO GOOD WHILE GAMING</div></div>
+<div id="mission-statement" inViewport (inViewportAction)="applyScrollView($event)">
+  <div class="label">OUR MISSION IS SIMPLE...</div>
+  <div class="title">
+    <div>DO GOOD WHILE GAMING</div>
+  </div>
+</div>
+
+<div id="join-us" inViewport (inViewportAction)="applyScrollView($event)">
+  <div class="header">So what can I do?</div>
+  <div class="actions">
+    <div class="action-item-container">
+      <div class="join action-item">
+        <img src="../../assets/svg/user-circle.svg">
+
+        <div class="action-header">Join the Team</div>
+
+        <div class="action-content">
+          <div class="content-header">Objectives:</div>
+          <div class="content-text">Raise money to help save childrens' lives!</div>
+
+          <div class="content-header">Rewards:</div>
+          <div class="content-text">
+            <div>
+              <b>XP:</b> 40,000,000</div>
+            <div>
+              <b>Modes Unlocked:</b> Computer, console, and tabletop games available for play!</div>
+            <div>
+              <b>Dungeon Unlocked:</b> Top 10 fundraisers get a tour of the hospital</div>
+            <div>
+              <b>Party Invite:</b> Top 50 fundraisers get invited to an exclusive party at Tabletop Board Game Cafe on November
+              3rd</div>
+            <div>
+              <b>Items Acquired:</b> Snacks and prizes provided</div>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          <button (click)="ctaClick('join')">Accept</button>
+        </div>
+      </div>
+    </div>
+    <div class="action-item-container">
+      <div class="donate action-item">
+        <img src="../../assets/svg/money.svg">
+
+        <div class="action-header">Sponsor</div>
+
+        <div class="action-content sponsor-container">
+          <div *ngFor="let sponsor of platinumSponsors">
+            <sponsor-tile [name]="sponsor.name" [label]="sponsor.label" [link]="sponsor.link"></sponsor-tile>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          <button class="sponsor-button" (click)="ctaClick('join')">Become a Sponsor</button>
+        </div>
+      </div>
+    </div>
+    <div class="action-item-container">
+      <div class="volunteer action-item">
+        <img src="../../assets/svg/star.svg">
+
+        <div class="action-header">Volunteer</div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -9,6 +9,7 @@ import { HorizontalNavBarComponent } from './horizontal-nav-bar/horizontal-nav-b
 import { HomeComponent } from './home/home.component';
 
 import { InViewportModule } from 'ng-in-viewport';
+import { SponsorTileComponent } from './sponsor-tile/sponsor-tile.component';
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -18,7 +19,8 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     AppComponent,
     HorizontalNavBarComponent,
-    HomeComponent
+    HomeComponent,
+    SponsorTileComponent
   ],
   imports: [
     BrowserModule,

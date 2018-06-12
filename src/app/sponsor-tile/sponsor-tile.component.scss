@@ -1,0 +1,39 @@
+@import '~assets/sass/variables';
+
+.tile-container {
+    cursor: pointer;
+    perspective: 600;
+    position: relative;
+    height: 115px;
+    width: 115px;
+
+    .card {
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+
+        &:hover {
+            transform: rotateY(180deg);
+        }
+
+        .side {
+            backface-visibility: hidden;
+            position: absolute;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+
+            &.back {
+                transform: rotateY(180deg);
+                background-color: $blue;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

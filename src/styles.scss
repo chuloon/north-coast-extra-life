@@ -7,7 +7,15 @@ body {
     font-family: 'headline';
     src: local('O'),
         url('assets/fonts/BebasNeue-Regular.ttf') format('truetype'),
-        url('assets/fonts/BebasNeue-Regular.otf') format('otf');
+        url('assets/fonts/BebasNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'normal';
+    src: local('O'),
+        url('assets/fonts/Modern_Sans_Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
