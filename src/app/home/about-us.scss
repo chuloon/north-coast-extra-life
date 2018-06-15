@@ -1,6 +1,14 @@
+@mixin memberTransition {
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            transform: translateX(#{ $i * 190 - 190 }px);
+        }
+    }
+}
+
 #about-us {
     min-height: 225px;
-    background-image: linear-gradient(to right, white, transparent), url('../../assets/images/what-the-hex.png');
+    background-image: linear-gradient(to right, white, white, transparent), url('../../assets/images/what-the-hex.png');
     position: relative;
     padding: 4vh;
 
@@ -9,51 +17,111 @@
         font-size: 5vh;
     }
 
+    #member-info {
+        position: absolute;
+        left: 250px;
+        opacity: 0;
+        transition: opacity 0.5s 0.3s;
+
+        #close-member {
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+            animation: pulse 1s 3;
+            animation-delay: 3s;
+        }
+
+        .info-text {
+            font-family: headline;
+            letter-spacing: 1px;
+            font-size: 30px;
+
+            .title {
+                color: $blue;
+                font-size: 35px;
+            }
+        }
+    }
+
     #members-thumbnail-container {
         display: flex;
         flex-wrap: wrap;
 
-        .member-tile {
-            margin-right: 15px;
-            cursor: pointer;
-            opacity: 0.6;
-            transition: opacity 0.3s;
+        .member {
+            position: absolute;
+            transition: transform 0.5s, opacity 0.3s;
 
-            height: 175px;
-            width: 175px;
-            overflow: hidden;
-
-            position: relative;
-            
-            .member-thumbnail {
-                position: absolute; 
-            }
-
-            .member-name {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                text-align: center;
-
-                padding-bottom: 5px;
-                padding-top: 5px;
-
-                font-family: headline;
-                font-size: 19px;
-                letter-spacing: 1px;
-
-                color: white;
-                background: rgba(0, 0, 0, 0.6);
+            .member-tile {
+                margin-right: 15px;
+                cursor: pointer;
+                opacity: 0.6;
+                transition: opacity 0.3s;
+    
+                height: 175px;
+                width: 175px;
+                overflow: hidden;
+    
+                position: relative;
                 
-                opacity: 0;
-                transition: opacity 1s;
-            }
-
-            &:hover {
-                opacity: 1;
-
+                .member-thumbnail {
+                    position: absolute; 
+                }
+    
                 .member-name {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    text-align: center;
+    
+                    padding-bottom: 5px;
+                    padding-top: 5px;
+    
+                    font-family: headline;
+                    font-size: 19px;
+                    letter-spacing: 1px;
+    
+                    color: white;
+                    background: rgba(0, 0, 0, 0.6);
+                    
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+    
+                &:hover {
                     opacity: 1;
+    
+                    .member-name {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &.show {
+        #members-thumbnail-container {
+            .member {
+                @include memberTransition;
+            }
+        }
+    }
+
+    &.hide {
+        #member-info {
+            opacity: 1;
+        }
+
+        #members-thumbnail-container {
+            .member {
+                opacity: 0;
+
+                &.selected {
+                    opacity: 1;
+
+                    .member-tile {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -65,3 +133,29 @@
         display: none;
     }
 }
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(98, 135, 162, 0.2);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(98, 135, 162, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(98, 135, 162, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(98, 135, 162, 0.2);
+      box-shadow: 0 0 0 0 rgba(98, 135, 162, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(98, 135, 162, 0);
+        box-shadow: 0 0 0 10px rgba(98, 135, 162, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(98, 135, 162, 0);
+        box-shadow: 0 0 0 0 rgba(98, 135, 162, 0);
+    }
+  }
