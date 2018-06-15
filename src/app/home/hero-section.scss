@@ -6,7 +6,7 @@
     .hero-mask {
       width: 100vw;
       height: calc(100vh - 45px);
-      background: rgba(0, 0, 0, 1);
+      // background: rgba(0, 0, 0, 1);
       text-align: center;
       transition: background 1s;
       display: flex;
@@ -64,34 +64,34 @@
         }
       }
     }
-  
-    &.is-ready {
-      .hero-mask {
-        background: rgba(0, 0, 0, 0.6);
-  
-        .ncgg-title {
-          opacity: 1;
+  }
+
+  .is-ready #home-container {
+    .hero-mask {
+      //background: rgba(0, 0, 0, 0.6);
+
+      .ncgg-title {
+        opacity: 1;
+      }
+
+      .event-date {
+        opacity: 0.8;
+        transform: translateY(0px);
+      }
+
+      .register-button {
+        opacity: 0.8;
+        transform: translateY(0px);
+
+        &:hover {
+          color: $tan;
+          border-color: $tan;
         }
-  
-        .event-date {
-          opacity: 0.8;
-          transform: translateY(0px);
-        }
-  
-        .register-button {
-          opacity: 0.8;
-          transform: translateY(0px);
-  
-          &:hover {
-            color: $tan;
-            border-color: $tan;
-          }
-        }
-  
-        .cta-down {
-          .chevron-down {
-              opacity: 1;
-          }
+      }
+
+      .cta-down {
+        .chevron-down {
+            opacity: 1;
         }
       }
     }

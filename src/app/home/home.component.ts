@@ -27,7 +27,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      document.getElementById("home-container").classList.add("is-ready");
+      //document.getElementById("home-container").classList.add("is-ready");
+      document.getElementById("site").classList.add("is-ready");
     }, 10);
   }
 

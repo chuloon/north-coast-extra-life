@@ -1,39 +1,71 @@
 @import '~assets/sass/variables';
-
 .tile-container {
-    cursor: pointer;
-    perspective: 600;
-    position: relative;
-    height: 115px;
-    width: 115px;
 
-    .card {
-        height: 100%;
-        position: absolute;
-        transform-style: preserve-3d;
-        transition: all 0.5s ease-in-out;
-        width: 100%;
+  cursor: pointer;
+  perspective: 600;
+  position: relative;
+  height: 115px;
+  width: 115px;
+  position: relative;
+  margin-bottom: 5px;
 
-        &:hover {
-            transform: rotateY(180deg);
-        }
+  .card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
 
-        .side {
-            backface-visibility: hidden;
-            position: absolute;
-            overflow: hidden;
-            height: 100%;
-            width: 100%;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
-            &.back {
-                transform: rotateY(180deg);
-                background-color: $blue;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-            }
-        }
+    &:before, &:after {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:10px;
+        bottom:10px;
+        left:0;
+        right:0;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
     }
+
+    &:after {
+        right:10px;
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg);
+        -moz-transform:skew(8deg) rotate(3deg);
+            -ms-transform:skew(8deg) rotate(3deg);
+            -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
+    }
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    .side {
+      backface-visibility: hidden;
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+
+      &.back {
+        transform: rotateY(180deg);
+        background-color: $blue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: headline;
+      }
+    }
+  }
 }

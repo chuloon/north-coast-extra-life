@@ -9,6 +9,21 @@
   position: fixed;
 }
 
+#site {
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2;
+  transition: background 1s;
+  background: rgba(0, 0, 0, 1);
+  position: relative;
+
+  &.is-ready {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
 @import "hero-section.scss";
 @import "mission-statement.scss";
 @import "join-us.scss";
+@import "about-us.scss";
