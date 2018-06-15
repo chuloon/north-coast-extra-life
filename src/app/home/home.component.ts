@@ -9,6 +9,7 @@ import { InViewportMetadata } from 'ng-in-viewport';
 })
 export class HomeComponent implements OnInit {
   @ViewChild(PerfectScrollbarComponent) ps: PerfectScrollbarComponent;
+  showMemberInfo: boolean = false;
 
   platinumSponsors = [
     {
@@ -21,6 +22,39 @@ export class HomeComponent implements OnInit {
       label: 'Singer',
       link: 'https://www.singer.com/'
     }
+  ];
+
+  members = [
+    {
+      id: 'jessica',
+      name: 'Jess Coleman',
+      hobbies: [
+        'Creative Writing', 'Making Clay Dice Dragons', 'Sketching Characters'
+      ],
+      games: [
+        'Ticket to Ride', 'Dominion', 'Betrayal at the House on the Hill', 'DnD 5e', 'Sims', 'Rollercoaster Tycoon 3', 'Civ IV'
+      ]
+    },
+    {
+      id: 'jessica',
+      name: 'Jess Coleman',
+      hobbies: [
+        'Creative Writing', 'Making Clay Dice Dragons', 'Sketching Characters'
+      ],
+      games: [
+        'Ticket to Ride', 'Dominion', 'Betrayal at the House on the Hill', 'DnD 5e', 'Sims', 'Rollercoaster Tycoon 3', 'Civ IV'
+      ]
+    },
+    {
+      id: 'jessica',
+      name: 'Jess Coleman',
+      hobbies: [
+        'Creative Writing', 'Making Clay Dice Dragons', 'Sketching Characters'
+      ],
+      games: [
+        'Ticket to Ride', 'Dominion', 'Betrayal at the House on the Hill', 'DnD 5e', 'Sims', 'Rollercoaster Tycoon 3', 'Civ IV'
+      ]
+    },
   ];
 
   constructor(private renderer: Renderer2) { }
@@ -49,5 +83,9 @@ export class HomeComponent implements OnInit {
       window.open('https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=39974', '_blank');
       break;
     }
+  }
+
+  getThumbnailPath = (id: string) => {
+    return "../../assets/images/members/" + id + ".jpg"
   }
 }

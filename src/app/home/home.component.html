@@ -51,7 +51,7 @@
               </div>
       
               <div class="cta-button">
-                <button (click)="ctaClick('join')">Accept</button>
+                <button (click)="ctaClick('join')">Accept the Challenge</button>
               </div>
             </div>
           </div>
@@ -101,5 +101,14 @@
       
       <div id="about-us">
         <div class="label">The Faces Behind the Names</div>
+
+        <div id="members-thumbnail-container">
+          <div class="member" *ngFor="let member of members">
+            <div class="member-tile">
+                <img class="member-thumbnail" [src]="getThumbnailPath(member.id)">
+                <div class="member-name">{{ member.name }}</div>
+            </div>
+          </div>
+        </div>
       </div>
 </div>

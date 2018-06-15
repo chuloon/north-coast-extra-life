@@ -1,6 +1,67 @@
 #about-us {
-    height: 225px;
-    max-height: 225px;
+    min-height: 225px;
     background-image: linear-gradient(to right, white, transparent), url('../../assets/images/what-the-hex.png');
     position: relative;
+    padding: 4vh;
+
+    .label {
+        font-family: headline;
+        font-size: 5vh;
+    }
+
+    #members-thumbnail-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .member-tile {
+            margin-right: 15px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+
+            height: 175px;
+            width: 175px;
+            overflow: hidden;
+
+            position: relative;
+            
+            .member-thumbnail {
+                position: absolute; 
+            }
+
+            .member-name {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+
+                padding-bottom: 5px;
+                padding-top: 5px;
+
+                font-family: headline;
+                font-size: 19px;
+                letter-spacing: 1px;
+
+                color: white;
+                background: rgba(0, 0, 0, 0.6);
+                
+                opacity: 0;
+                transition: opacity 1s;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                .member-name {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-us {
+        display: none;
+    }
 }
