@@ -66,6 +66,11 @@
                   <sponsor-tile [name]="sponsor.name" [label]="sponsor.label" [link]="sponsor.link"></sponsor-tile>
                 </div>
               </div>
+              <div class="action-content sponsor-container">
+                <div *ngFor="let sponsor of sponsors">
+                  <sponsor-tile [name]="sponsor.name" [label]="sponsor.label" [link]="sponsor.link"></sponsor-tile>
+                </div>
+              </div>
       
               <div class="cta-button">
                 <button class="sponsor-button" (click)="ctaClick('sponsor')">Become a Sponsor</button>

@@ -30,6 +30,29 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  sponsors = [
+    {
+      name: 'odd-forge',
+      label: 'Odd Forge',
+      link: 'https://www.etsy.com/shop/OddForge?ref=ss_profile'
+    },
+    {
+      name: 'fun-board-games',
+      label: 'Fun Board Games',
+      link: 'https://www.etsy.com/shop/FunBoardGames?ref=ss_profile'
+    },
+    {
+      name: 'ground-zero',
+      label: 'Ground Zero',
+      link: 'https://www.facebook.com/Ground-Zero-Comics-and-Cards-92545866626/'
+    },
+    {
+      name: 'meglake',
+      label: 'MegLake',
+      link: 'https://makeupbymeg.org/'
+    },
+  ];
+
   members = [
     {
       id: 'jessica',
@@ -51,6 +74,13 @@ export class HomeComponent implements OnInit {
       hometown: 'Chippewa, PA',
       hobbies: "Scouting, video games, role playing, live action role playing, recreational shooting/hunting",
       games: "Dnd 3.5/5.0, Star Wars d20, Ark, Anything Elder scrolls or fallout, Legend of Zelda series, GTA series"
+    },
+    {
+      id: 'brady',
+      name: 'Brady Risner',
+      hometown: 'Carey, OH',
+      hobbies: "Biking, board games, hanging out with my daughter",
+      games: "Inis, Deception, Cosmic Encounters, Fallout 3, Minecraft, Halo 2 "
     }
   ];
 
@@ -93,7 +123,7 @@ export class HomeComponent implements OnInit {
       window.open('mailto:jmcoleman.568@gmail.com?subject=New Sponsor Inquiry');
       break;
       case 'volunteer':
-      window.open('mailto:jmcoleman.568@gmail.com?subject=Volunteer Application');
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSeKinozapnOqRPm_qjl_KiFPAVCFiUvXAIhrt1dlLb1rHGRcA/viewform', '_blank');
     }
   }
 
