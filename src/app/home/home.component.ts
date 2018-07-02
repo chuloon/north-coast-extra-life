@@ -81,6 +81,20 @@ export class HomeComponent implements OnInit {
       hometown: 'Carey, OH',
       hobbies: "Biking, board games, hanging out with my daughter",
       games: "Inis, Deception, Cosmic Encounters, Fallout 3, Minecraft, Halo 2 "
+    },
+    {
+      id: 'josh',
+      name: 'Josh Fox',
+      hometown: 'Marietta, OH',
+      hobbies: "Backpacking, playing trumpet, playing with our dog",
+      games: "Super Smash Bros., Legend of Zelda- Twilight Princess & Ocarina of Time, Cards Against Humanity, Euchre"
+    },
+    {
+      id: 'kate',
+      name: 'Kate Chance',
+      hometown: 'Sabina, OH',
+      hobbies: "Baking, cuddling with our dog, roadtrip adventures, shopping",
+      games: "Sims, Uno, Stratego, Cards Against Humanity"
     }
   ];
 

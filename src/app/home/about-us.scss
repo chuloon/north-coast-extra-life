@@ -1,5 +1,5 @@
 @mixin memberTransition {
-    @for $i from 1 through 5 {
+    @for $i from 1 through 6 {
         &:nth-child(#{$i}) {
             transform: translateX(#{ $i * 190 - 190 }px);
         }
