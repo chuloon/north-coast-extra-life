@@ -3,8 +3,8 @@
 <div id="site">
     <div id="home-container">
         <div class="hero-mask">
-          <div class="ncgg-title">North Coast Gaming Guild</div>
-          <div class="event-date">November 3, 2018</div>
+          <div class="ncgg-title">North Coast Gamer Guild</div>
+          <div class="event-date">November 2-3, 2019</div>
           <div>
             <button (click)="registerClick()" class="register-button">Register</button>
           </div>
@@ -37,14 +37,13 @@
                 <div class="content-header">Rewards:</div>
                 <div class="content-text">
                   <div>
-                    <b>XP:</b> 40,000,000</div>
+                    <b>XP:</b> 50,000,000</div>
                   <div>
-                    <b>Modes Unlocked:</b> Computer, console, and tabletop games available for play!</div>
+                    <b>Modes Unlocked:</b> Tabletop, console, role-playing, and large group games available for play!</div>
                   <div>
-                    <b>Dungeon Unlocked:</b> Top 10 fundraisers get a tour of the hospital</div>
+                    <b>Dungeon Unlocked:</b> Top fundraisers will be invited to UH Rainbow Babies & Children's Hospital</div>
                   <div>
-                    <b>Party Invite:</b> Top 50 fundraisers get invited to an exclusive party at Tabletop Board Game Cafe on November
-                    3rd</div>
+                    <b>Party Invite:</b> Members who raise over $100 will be invited to the exclusive overnight at Tabletop Board Game Cafe with a cosplay contest, insane raffle prizes, and the chance to meet our miracle kids and families at the hospital!</div>
                   <div>
                     <b>Items Acquired:</b> Snacks and prizes provided</div>
                 </div>
@@ -70,6 +69,10 @@
                 <div *ngFor="let sponsor of sponsors">
                   <sponsor-tile [name]="sponsor.name" [label]="sponsor.label" [link]="sponsor.link"></sponsor-tile>
                 </div>
+              </div>
+
+              <div class="action-content" style="margin-top: 25px;">
+                All donations are tax deductible and help make miracles <strong>For The Kids at UH Rainbow Babies and Children's Hospitals</strong>. Request information on how to become a sponsor below!
               </div>
       
               <div class="cta-button">
@@ -105,7 +108,7 @@
       </div>
       
       <div id="about-us" inViewport (inViewportAction)="applyScrollView($event)">
-        <div class="label">The Faces Behind the Names</div>
+        <div class="label">The Faces Behind the Names <a class="contact-us-link" target="_blank" href="mailto:northcoastgg@gmail.com">Contact Us</a></div>
 
         <div id="members-thumbnail-container">
           <div [id]="member.id + '-thumbnail'" class="member" *ngFor="let member of members">
@@ -118,9 +121,8 @@
 
         <div id="member-info" *ngIf="showMemberInfo">
           <div id="close-member" (click)="closeMember()"><img src="../../assets/svg/close.svg"></div>
-          <div class="info-text"><span class="title">Name: </span>{{ selectedName }}</div>
+          <div class="info-text"><span class="title">{{ selectedTitle }}: </span>{{ selectedName }} <a *ngIf="selectedMember.twitter" [href]="selectedMember.twitter" target="_blank"><img class="social-media" src="../../assets/images/twitter.png" alt="twitter" /></a> <a *ngIf="selectedMember.twitch" [href]="selectedMember.twitch" target="_blank"><img class="social-media" src="../../assets/images/twitch.png" alt="twitch" /></a></div>
           <div class="info-text"><span class="title">Hometown: </span>{{ selectedHometown }}</div>
-          <div class="info-text"><span class="title">Favorite Hobbies: </span>{{ selectedHobbies }}</div>
           <div class="info-text"><span class="title">Favorite Games: </span>{{ selectedGames }}</div>
         </div>
       </div>

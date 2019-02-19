@@ -1,5 +1,5 @@
 @mixin memberTransition {
-    @for $i from 1 through 6 {
+    @for $i from 1 through 14 {
         &:nth-child(#{$i}) {
             transform: translateX(#{ $i * 190 - 190 }px);
         }
@@ -17,11 +17,26 @@
         font-size: 5vh;
     }
 
+    .contact-us-link {
+        color: $blue;
+        font-size: 0.6em;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #445f73;
+        }
+    }
+
     #member-info {
         position: absolute;
         left: 250px;
         opacity: 0;
         transition: opacity 0.5s 0.3s;
+
+        .social-media {
+            width: 25px
+        }
 
         #close-member {
             position: absolute;
