@@ -1,7 +1,7 @@
 @mixin memberTransition {
     @for $i from 1 through 14 {
         &:nth-child(#{$i}) {
-            transform: translateX(#{ $i * 190 - 190 }px);
+            transform: translateX(#{ $i * 110 - 110 }px);
         }
     }
 }
@@ -30,7 +30,7 @@
 
     #member-info {
         position: absolute;
-        left: 250px;
+        left: 170px;
         opacity: 0;
         transition: opacity 0.5s 0.3s;
 
@@ -72,14 +72,16 @@
                 opacity: 0.6;
                 transition: opacity 0.3s;
     
-                height: 175px;
-                width: 175px;
+                height: 100px;
+                width: 100px;
                 overflow: hidden;
     
                 position: relative;
                 
                 .member-thumbnail {
                     position: absolute; 
+                    width: 100px;
+                    height: 100px;
                 }
     
                 .member-name {

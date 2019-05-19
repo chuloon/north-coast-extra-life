@@ -28,6 +28,11 @@ export class HomeComponent implements OnInit {
       name: 'singer',
       label: 'Singer',
       link: 'https://www.singer.com/'
+    },
+    {
+      name: 'lunarbaboon',
+      label: 'Lunarbaboon Comics',
+      link: 'http://www.lunarbaboon.com/'
     }
   ];
 
@@ -41,7 +46,12 @@ export class HomeComponent implements OnInit {
       name: 'pubg',
       label: 'PUBG',
       link: 'https://www.pubg.com/'
-    }
+    },
+    {
+      name: 'calico',
+      label: 'Calico Jack Coffee',
+      link: 'https://www.calicojack.coffee/'
+    },
   ];
 
   members = [
@@ -50,24 +60,21 @@ export class HomeComponent implements OnInit {
       title: 'The Guildmaster',
       name: 'Jess Coleman',
       hometown: 'Cleveland, OH',
-      hobbies: "Creative Writing, Making Clay Dice Dragons, and Sketching Characters",
       games: "Ticket to Ride, Dominion, Betrayal at the House on the Hill, DnD 5e, Sims, Rollercoaster Tycoon 3, and Civ IV",
       twitter: 'https://twitter.com/livtrubiano',
       twitch: 'https://www.twitch.tv/stuffalothebuffalo'
     },
     {
       id: 'ben',
-      title: 'The Webmaster',
+      title: 'A Spooky Ghost',
       name: 'Ben Ng',
       hometown: 'Cincinnati, OH',
-      hobbies: "Cosplay, sand volleyball, and video games",
       games: "Final Fantasy XIV, League of Legends, Horizon Zero Dawn, and Overwatch"
     },
     {
       id: 'steven',
       name: 'Steven Herron',
       hometown: 'Chippewa, PA',
-      hobbies: "Scouting, video games, role playing, live action role playing, recreational shooting/hunting",
       games: "Dnd 3.5/5.0, Star Wars d20, Ark, Anything Elder scrolls or fallout, Legend of Zelda series, GTA series",
       title: 'The Brand Manager'
     },
@@ -75,7 +82,6 @@ export class HomeComponent implements OnInit {
       id: 'brady',
       name: 'Brady Risner',
       hometown: 'Carey, OH',
-      hobbies: "Biking, board games, hanging out with my daughter",
       games: "Inis, Deception, Cosmic Encounters, Fallout 3, Minecraft, Halo 2 ",
       title: 'Supreme Host'
     },
@@ -83,7 +89,6 @@ export class HomeComponent implements OnInit {
       id: 'josh',
       name: 'Josh Fox',
       hometown: 'Marietta, OH',
-      hobbies: "Backpacking, playing trumpet, playing with our dog",
       games: "Super Smash Bros., Legend of Zelda- Twilight Princess & Ocarina of Time, Cards Against Humanity, Euchre",
       title: 'The Trusted Trustee'
     },
@@ -91,9 +96,54 @@ export class HomeComponent implements OnInit {
       id: 'kate',
       name: 'Kate Chance',
       hometown: 'Sabina, OH',
-      hobbies: "Baking, cuddling with our dog, roadtrip adventures, shopping",
       games: "Sims, Uno, Stratego, Cards Against Humanity",
       title: 'The Trusted Trustee'
+    },
+    {
+      id: 'austin',
+      name: 'Austin Barbian',
+      hometown: 'Ashtabula, OH',
+      games: "Rocket League, Destiny 2, D&D 5e, Deception",
+      title: 'Social Media Manager',
+      twitch: 'https://twitter.com/restinpeace120',
+      twitter: 'https://www.twitch.tv/restinpeace120'
+    },
+    {
+      id: 'zach',
+      name: 'Zach Zahnke',
+      hometown: 'Medina, OH',
+      games: "Pokemon, D&D 5e, Munchkin, Win Lose Banana",
+      title: 'Marketing Manager',
+      twitch: 'https://twitter.com/zachontitan',
+      twitter: 'https://www.twitch.tv/zachontitan'
+    },
+    {
+      id: 'brynne',
+      name: 'Brynne Grady',
+      hometown: 'Cleveland, OH',
+      games: "Dominion, 5e, Pathfinder, Liar’s Dice",
+      title: 'Fundraising Chair',
+    },
+    {
+      id: 'dan',
+      name: 'Dan Pastor',
+      hometown: 'Brunswick, OH',
+      games: "D&D5e and the Mass Effect Series",
+      title: 'Corporate Sponsorship Chair',
+    },
+    {
+      id: 'brad',
+      name: 'Brad Bailey',
+      hometown: 'Elyria, OH',
+      games: "Gloomhaven (duh), Dark Souls, Factorio Lunar, The Silver Star Story",
+      title: 'Social Events Chair',
+    },
+    {
+      id: 'tonya',
+      name: 'Tonya Atha',
+      hometown: 'Springfield, OH',
+      games: "D&D, Betrayal at the House on the Hill, Avalon Deception",
+      title: 'Annual Event Chair',
     },
   ];
 
