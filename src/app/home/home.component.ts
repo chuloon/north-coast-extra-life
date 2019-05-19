@@ -52,6 +52,11 @@ export class HomeComponent implements OnInit {
       label: 'Calico Jack Coffee',
       link: 'https://www.calicojack.coffee/'
     },
+    {
+      name: 'halcyon',
+      label: 'Harbor Halcyon',
+      link: 'https://www.harborhalcyon.com/'
+    },
   ];
 
   members = [
